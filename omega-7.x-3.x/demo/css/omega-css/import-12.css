@@ -2,61 +2,35 @@
 
 @import url('default/alpha-mobile.css');
 
-/*
-    * Change container-12
-    * Change container-16
-    * Change container-24
-    *
-    * Change background alpha-default-narrow-12
-    * Change background alpha-default-narrow-16
-    * Change background alpha-default-narrow-24
-    *
-    * Change background alpha-default-normal-12
-    * Change background alpha-default-normal-16
-    * Change background alpha-default-normal-24
-    *
-    * Change background alpha-default-wide-12
-    * Change background alpha-default-wide-16
-    * Change background alpha-default-wide-24
-*/
-/*
-    * Layout: mobile - narrow - normal - wide   = "Default Not comment Media Screen";
-    * Layout: mobile - narrow - normal          = "Comment Media Screen 3";
-    * Layout: mobile - narrow                   = "Comment Media Screen 3 and Media Screen 2";
-    * Layout: mobile                            = "Comment Media Screen 3 and Media Screen 2 and Media Screen 1";
-    * Layout: mobile - normal                   = "Comment Media Screen 3 and Media Screen 1";";
-    *
-*/
-
 /* Media Screen 1 */
-@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape){
-    .container-16{
-        background: url(default/alpha-default-narrow-16.png);
+@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape) {
+    .container-12 {
+        background: url(default/alpha-default-narrow-12.png);
     }
 }
 
 /* Media Screen 2 */
-@media all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape){
-    .container-16{
-        background: url(default/alpha-default-normal-16.png);
+@media all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape) {
+    .container-12 {
+        background: url(default/alpha-default-normal-12.png);
     }
 }
 
 /* Media Screen 3 */
-@media all and (min-width: 1220px){
-    .container-16{
-        background: url(default/alpha-default-wide-16.png);
+@media all and (min-width: 1220px) {
+    .container-12 {
+        background: url(default/alpha-default-wide-12.png);
     }
 }
 
-.alpha-debug-block{
+.alpha-debug-block {
     background-color: rgba(255, 255, 255, 0.25);
     border: 1px solid #CCCCCC;
     display: block;
     margin: 0 0 10px;
     padding: 9px 12px;
 }
-.alpha-debug-block h2{
+.alpha-debug-block h2 {
     padding: 0px;
     margin: 0px;
     font-size: 12px;
