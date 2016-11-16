@@ -30,22 +30,22 @@
 
 /* Media Screen 1 */
 @media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape){
-    .container-12{
-        background: url(default/alpha-default-narrow-12.png);
+    .container-16{
+        background: url(default/alpha-default-narrow-16.png);
     }
 }
 
 /* Media Screen 2 */
 @media all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape){
-    .container-12{
-        background: url(default/alpha-default-normal-12.png);
+    .container-16{
+        background: url(default/alpha-default-normal-16.png);
     }
 }
 
 /* Media Screen 3 */
 @media all and (min-width: 1220px){
-    .container-12{
-        background: url(default/alpha-default-wide-12.png);
+    .container-16{
+        background: url(default/alpha-default-wide-16.png);
     }
 }
 
