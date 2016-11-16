@@ -1,0 +1,27 @@
+//
+// Font Family
+// --------------------------------------------------
+.font-face(@fontFamily) {
+  font-family: @fontFamily;
+  src: url("@{fontPath}@{fontFamily}-webfont.eot");
+  src: url("@{fontPath}@{fontFamily}-webfont.eot?#iefix") format('embedded-opentype'),
+  url("@{fontPath}@{fontFamily}-webfont.woff") format('woff'),
+  url("@{fontPath}@{fontFamily}-webfont.ttf") format('truetype'),
+  url("@{fontPath}@{fontFamily}-webfont.svg#@{fontFamily}") format('svg');
+}
+
+/*@font-face {
+  .font-face("@{font-name}");
+}*/
+
+
+// make @font-face display sexy in chrome: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/#fix
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .font-face(@fontFamily) {
+  	font-family: @fontFamily;
+  	src: url("@{fontPath}@{fontFamily}-webfont.svg#@{fontFamily}") format('svg');
+  }
+  /*@font-face {
+    .font-face("@{font-name}");
+  }*/
+}
