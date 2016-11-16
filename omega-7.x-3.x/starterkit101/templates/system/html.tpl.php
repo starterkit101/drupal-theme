@@ -1,5 +1,5 @@
 <?php 
-$pathTema=base_path().drupal_get_path('theme', 'serijakala');
+$pathTema=base_path().drupal_get_path('theme', 'starterkit101');
 print $doctype; 
 ?>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
