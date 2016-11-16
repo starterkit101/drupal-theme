@@ -1,0 +1,186 @@
+@charset "utf-8";
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+#page {
+  display: table;
+  width: 100%;
+}
+html > body #page {
+  height: 100%;
+}
+*:first-child + html #page {
+  height: auto;
+}
+.section {
+  display: table-row;
+}
+html > body .section-content {
+  height: 100%;
+}
+*:first-child + html body .section-content {
+  height: auto;
+}
+/*@font-face {
+  .font-face("@{font-name}");
+}*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /*@font-face {
+    .font-face("@{font-name}");
+  }*/
+}
+.html #page.page {
+  min-height: 100%;
+  position: relative;
+}
+.html #page.page #section-footer {
+  position: relative;
+}
+form .form-item label {
+  font-weight: normal;
+}
+form .form-item label .form-required {
+  color: #cc0000;
+}
+form .form-item .description {
+  font-size: 12px;
+}
+form .grippie {
+  display: none;
+}
+#messagesModal .modal-content .modal-body .messages {
+  border: 1px solid;
+  padding: 20px;
+  font-size: 14px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+#messagesModal .modal-content .modal-footer {
+  padding-top: 0px;
+  border: none;
+}
+@media (min-width: 768px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    /*border: 1px solid #ccc;*/
+  }
+  td {
+    padding: 10px 0px 20px 0px;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 40% !important;
+    width: 100% !important;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    padding-right: 10px;
+    white-space: nowrap;
+    color: #000;
+  }
+  td.views-field-line-item-title:before {
+    content: "ARTICOLO";
+  }
+  td.views-field-commerce-unit-price:before {
+    content: "PUNTI";
+  }
+  td.views-field-edit-quantity:before {
+    content: "QUANTITÀ";
+  }
+  td.views-field-commerce-total:before {
+    content: "TOTALE PUNTI";
+  }
+  td.views-field-ordine:before {
+    content: "N° ORDINE";
+  }
+  td.views-field-articolo:before {
+    content: "ARTICOLO";
+  }
+  td.views-field-data:before {
+    content: "DATA ORDINE";
+  }
+  td.views-field-punti:before {
+    content: "PUNTI";
+  }
+  td.views-field-qta:before {
+    content: "QUANTITÀ";
+  }
+  td.views-field-quantity:before {
+    content: "QUANTITÀ";
+  }
+  td.views-field-co:before {
+    content: "C/O";
+  }
+  td.views-field-dettagli:before {
+    content: "DETTAGLI";
+  }
+  td.views-field-codice:before {
+    content: "CODICE";
+  }
+  td.views-field-descrizione:before {
+    content: "DESCRIZIONE";
+  }
+  td.views-field-punti:before {
+    content: "PUNTI";
+  }
+  td:before {
+    content: "";
+  }
+  td:before {
+    content: "";
+  }
+  td:before {
+    content: "";
+  }
+}
+::-moz-selection {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  text-shadow: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+::selection {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  text-shadow: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+  outline: 0;
+}
+#commerce-checkout-form-review .form-wrapper table.checkout-review {
+  width: 100%;
+  margin: 25px 0px;
+}

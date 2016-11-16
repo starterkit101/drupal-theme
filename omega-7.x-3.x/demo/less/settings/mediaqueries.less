@@ -1,0 +1,42 @@
+// ------------------------------------------------------------------
+// VARIABLE MEDIAQUERIES
+// ------------------------------------------------------------------
+
+// SET VARIABLES FOR MEDIA QUERIES ----------------------------------
+@screen-sm:	768px;
+@screen-min-sm: @screen-sm;
+@screen-max-sm: (@screen-sm - 1);
+@min-sm:   	~"(min-width: @{screen-min-sm})";
+
+@screen-md:	992px;
+@screen-min-md: @screen-md;
+@screen-max-md: (@screen-md - 1);
+@min-md:   	~"(min-width: @{screen-min-md})";
+
+@screen-lg:	1200px;
+@screen-min-lg: @screen-lg;
+@screen-max-lg: (@screen-lg - 1);
+@min-lg:   	~"(min-width: @{screen-min-lg})";
+
+@max-sm:   	~"(max-width: @{screen-max-sm})";
+@max-md:   	~"(max-width: @{screen-max-md})";
+@max-lg:   	~"(max-width: @{screen-max-lg})";
+
+// EXAMPLE OF MEDIA QUERIES -----------------------------------------
+@media @max-sm {
+	
+}
+@media @min-sm {
+	
+}
+@media @min-md {
+	
+}
+@media @min-lg {
+	
+}
+
+// EXAMPLE OF MEDIA QUERIES DOUBLE - !Problem fix IE8!
+@media @min-sm and @max-md {
+
+}

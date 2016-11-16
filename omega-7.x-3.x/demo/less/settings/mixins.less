@@ -1,0 +1,57 @@
+// Complete mixins in bootstrap/mixins/vendor-prefixes.less
+// Add Mariotti and Sons...
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+  -moz-box-shadow: @shadow;
+  -ms-box-shadow: @shadow;
+  -o-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+// Filter Gray
+.filter(@grayscale) when (@grayscale > 0){
+  filter: url("@{grayScalePath}");
+  filter: gray;
+  -webkit-filter: grayscale(@grayscale);
+  &:hover{
+	filter: none;
+	-webkit-filter: grayscale(0);
+  }
+}
+.filter(@grayscale) when (@grayscale < 1){
+  filter: none;
+  -webkit-filter: grayscale(@grayscale);
+  &:hover{
+	filter: url("@{grayScalePath}");
+	filter: gray;
+	-webkit-filter: grayscale(1);
+  }
+}
+
+.rgba(@r, @g, @b, @alpha) {
+  @colour: rgb(@r, @g, @b);
+  @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+  @alphaColour: rgba(@r, @g, @b, @alpha);
+  @ieAlphaColour: argb(@alphaColour);
+
+  background-color: @colour; // Fallback for older browsers
+  // This will be ignored by browsers that don't support it.
+  background-color: @alphaColour;
+
+  // OldIE hacks
+  .ie & { //assumes you have conditional commented <html> tags
+	zoom: 1; // hasLayout
+	background-color: transparent;
+	-ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
+  }
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// *** IMPORT SETTINGS DEFAULT --------------------------------------
+@import "settings/settings.less";
+
+// *** IMPORT FILE TO EACH REGION OF OMEGA 3.1 ----------------------
+@import 'regions/regions.less';
+
+// *** IMPORT SETTINGS GENERAL --------------------------------------
+@import 'general/form.less';
+@import 'general/messages.less';
+@import 'general/table.less';
+@import 'general/style.less';
+
+// *** DEFAULT SYSTEM PAGE ------------------------------------------
+@import "system/pages/error.less";
+@import "system/pages/maintenance-page.less";
+@import "system/pages/user-profile.less";
+
+// *** SPECIFIC PAGE WITH INCLUDE FORM ------------------------------
+@import "system/form/user-login.less";
+@import "system/form/user-register.less";
+@import "system/form/password-request.less";
+@import "system/form/password-reset.less";
+@import "system/form/user-edit.less";
+@import "system/form/user-contact.less";
+
+// *** SPECIFIC MENU DEFAULT DRUPAL ---------------------------------
+@import "system/menu/main-menu.less";
+@import "system/menu/navigation.less";
+@import "system/menu/user-menu.less";
+@import "system/menu/block-menu.less";
+
+// *** SPECIFIC PAGE ------------------------------------------------
+@import "custom/pages/homepage.less";
+
+// *** SPECIFIC BLOCK -----------------------------------------------
+@import "custom/blocks/login-block.less";
+
+// *** DEFAULT SYSTEM MODULES ---------------------------------------
+@import "system/modules/views.less";
+
+// *** ECOMMERCE ----------------------------------------------------
+ @import "ecommerce/settings-ecommerce.less";
